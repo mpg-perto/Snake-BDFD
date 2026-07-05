@@ -1,6 +1,6 @@
 ![MPG](Assents/mpg.png)
 
-# 🐍 Snake para Discord — BDFD + AkioCodes CV2
+# 🐍 Snake para Discord — BDFD + CV2
 
 ![Snake](Assents/snake.png)
 
