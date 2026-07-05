@@ -31,19 +31,15 @@ Se juega con el comando `!snake`, que dibuja un tablero 5x5 y una cruz de botone
 2. Crea un comando de texto `!snake` y pega dentro el contenido de [`Codigos/!snake.md`](Codigos/!snake.md) (solo el bloque de código, sin los ``` de markdown).
 3. Crea un comando con el trigger `$onInteraction` (sin ID entre corchetes, para que capture todos los botones) y pega el contenido de [`Codigos/$onInteraction.md`](Codigos/$onInteraction.md).
 4. Antes de probarlo, crea estas 5 variables en el panel de BDFD (pestaña *Variables*):
-   - `snake_body`
-   - `snake_dir`
-   - `snake_apple`
-   - `snake_score`
-   - `snake_alive`
+
 5. Guarda, prende el bot y ejecuta `!snake` en tu servidor.
 
 ## Variables necesarias
 
 | Variables | Valor |
 | :--- | :--- |
-| cuerpo_serpiente | |
-| serpiente_dir | |
-| manzana_serpiente | |
-| puntuación_serpiente | |
-| serpiente_viva | No (opcional, se puede dejar vacío) |
+| snake_body | |
+| snake_dir | |
+| snake_apple | |
+| snake_score | |
+| snake_alive | No (opcional, se puede dejar vacío) |
