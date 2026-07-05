@@ -1,6 +1,7 @@
 # Callback `$onInteraction`
 
-Pégalo tal cual en el código con el trigger `$onInteraction` (sin ID entre corchetes — debe capturar TODOS los botones del bot).
+> [!IMPORTANT]
+> Pégalo tal cual en el código con el trigger `$onInteraction` (sin ID entre corchetes — debe capturar TODOS los botones del bot).
 
 ```bdscript
 $nomention
