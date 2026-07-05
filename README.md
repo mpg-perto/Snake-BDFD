@@ -37,3 +37,12 @@ Se juega con el comando `!snake`, que dibuja un tablero 5x5 y una cruz de botone
    - `snake_score`
    - `snake_alive`
 5. Guarda, prende el bot y ejecuta `!snake` en tu servidor.
+
+## Variables necesarias
+
+| Variables | Valor |
+| snake_body | Dejalo vacio |
+| snake_dir | Dejalo vacio |
+| snake_apple | Dejalo vacio |
+| snake_score | Dejalo vacio |
+| snake_alive | No (opcional, se puede dejar vacio) |
