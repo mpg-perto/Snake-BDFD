@@ -1,6 +1,7 @@
 # Comando `!snake`
 
-Pégalo tal cual en el editor de código de tu comando `!snake` en BDFD.
+> [!IMPORTANT]
+> Pégalo tal cual en el editor de código de tu comando `!snake` en BDFD.
 
 ```bdscript
 $nomention
