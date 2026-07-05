@@ -3,6 +3,7 @@
 # 🐍 Snake para Discord — BDFD + CV2
 
 [¿Qué es esto?](https://github.com/mpg-perto/Snake-BDFD/tree/main#qu%C3%A9-es-esto)
+[¿De qué sirve / cómo funciona por dentro?](https://github.com/mpg-perto/Snake-BDFD/tree/main#de-qu%C3%A9-sirve--c%C3%B3mo-funciona-por-dentro)
 
 ![Snake](Assents/snake.png)
 
