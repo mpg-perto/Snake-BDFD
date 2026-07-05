@@ -30,7 +30,7 @@ Se juega con el comando `!snake`, que dibuja un tablero 5x5 y una cruz de botone
 ## Cómo usar este repositorio
 
 1. Entra a tu bot en BDFD.
-2. Crea un comando de texto `!snake` y pega dentro el contenido de [`Codigos/!snake.md`](Codigos/!snake.md) (solo el bloque de código, sin los ``` de markdown).
+2. Crea un comando `!snake` y pega dentro el contenido de [`Codigos/!snake.md`](Codigos/!snake.md) (solo el bloque de código, sin los ``` de markdown).
 3. Crea un comando con el trigger `$onInteraction` (sin ID entre corchetes, para que capture todos los botones) y pega el contenido de [`Codigos/$onInteraction.md`](Codigos/$onInteraction.md).
 4. Antes de probarlo, crea estas [5 variables](https://github.com/mpg-perto/Snake-BDFD/blob/main/README.md#variables-necesarias) en el panel de BDFD (pestaña *Variables*):
 
