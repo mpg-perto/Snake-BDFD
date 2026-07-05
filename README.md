@@ -1,2 +1,54 @@
-# Snake-BDFD
-Juego de Snake en Bot Designer For Discord (BDFD)
+![MPG](Assents/mpg.png)
+
+# 🐍 Snake para Discord — BDFD + AkioCodes CV2
+
+![Snake](Assents/snake.png)
+
+## ¿Qué es esto?
+
+Un juego de **Snake** jugable directamente dentro de un mensaje de Discord, hecho con **Bot Designer For Discord (BDFD)** y los **componentes CV2** de **AkioCodes**. Todo el tablero, los movimientos, el puntaje y las colisiones se generan con BDScript puro — sin backends externos, sin bases de datos aparte, sin nada que no sea BDFD.
+
+Se juega con el comando `!snake`, que dibuja un tablero 5x5 y una cruz de botones (⬆️⬅️⏹️➡️⬇️) debajo. Cada jugador tiene su propia partida, guardada por su ID de usuario, y **solo esa persona puede tocar sus botones**.
+
+## ¿De qué sirve / cómo funciona por dentro?
+
+BDFD **no tiene loops reales** (`for`, `while`, etc.), así que este proyecto resuelve todo con lógica desenrollada a mano:
+
+- **El tablero (5x5 = 25 celdas)** se construye con 25 bloques `$if/$elseif/$else` repetidos manualmente, no con un loop. Cada celda se compara contra la posición de la serpiente y de la manzana usando `$textSplit` + `$getTextSplitIndex`.
+- **La serpiente** se guarda como un string tipo `"3,3|3,2|3,1"` (cabeza primero, segmentos separados por `|`). Moverse es anteponer una cabeza nueva y — si no comió manzana — quitar la cola con `$removeSplitTextElement`.
+- **Las colisiones** (con la pared o con el propio cuerpo) se detectan comparando la nueva posición de la cabeza contra los límites del tablero y contra el resto del cuerpo.
+- **La manzana** aparece en una celda al azar que no esté ocupada por la serpiente. Si el sorteo choca 3 veces seguidas, se hace un barrido completo y determinista de las 25 celdas para garantizar que siempre aparezca en algún lugar libre (nunca "desaparece").
+- **Cuando la serpiente llena las 25 celdas**, no es game over: vuelve a su tamaño inicial y sigue jugando, pero **el puntaje nunca se reinicia** — sigue acumulando indefinidamente.
+- **Seguridad por dueño de partida:** cada botón lleva el ID del dueño incrustado en su `customID` (`snake-up-123456789`, por ejemplo). Cuando alguien más hace click, el bot lo detecta y responde que no puede usar esa partida, sin tocar el estado del juego.
+- **Botones de adorno:** la cruz de control está enmarcada en una grilla 3x3 con botones negros deshabilitados (`⬛`) en las esquinas, solo para que se vea simétrica.
+
+## Cómo usar este repositorio
+
+1. Entra a tu bot en BDFD.
+2. Crea un comando de texto `!snake` y pega dentro el contenido de [`Codigos/!snake.md`](Codigos/!snake.md) (solo el bloque de código, sin los ``` de markdown).
+3. Crea un comando con el trigger `$onInteraction` (sin ID entre corchetes, para que capture todos los botones) y pega el contenido de [`Codigos/$onInteraction.md`](Codigos/$onInteraction.md).
+4. Antes de probarlo, crea manualmente estas 5 variables en el panel de BDFD (pestaña *Variables*), ya que `$setUserVar`/`$getUserVar` no las crea solas:
+   - `snake_body`
+   - `snake_dir`
+   - `snake_apple`
+   - `snake_score`
+   - `snake_alive` (déjala con valor por defecto `no` en el panel)
+5. Guarda, publica el bot y ejecuta `!snake` en tu servidor.
+
+## Estructura de este repo
+
+```
+Codigos/
+  !snake.md            → código del comando que inicia la partida
+  $onInteraction.md     → código que maneja todos los botones (movimiento, colisiones, respawn, seguridad)
+Assents/
+  mpg.png               → imagen del jugador/creador
+  snake.png             → logo del juego
+README.md               → este archivo
+```
+
+## Nota sobre las imágenes
+
+Las imágenes de `Assents/` son **placeholders genéricos** (no tenía las artes originales de "mpg" y "snake" para incluir). Reemplázalas por las tuyas manteniendo el mismo nombre de archivo (`mpg.png` y `snake.png`) y este README se actualizará solo, sin tocar nada más.
+
+> ⚠️ También noté que pediste la extensión `.pnj` para las imágenes — no es un formato de imagen válido (GitHub no puede renderizarlo en el README), así que las dejé como `.png`, que es lo que realmente se necesita para que se vean aquí arriba.
