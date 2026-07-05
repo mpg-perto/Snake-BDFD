@@ -45,3 +45,6 @@ Se juega con el comando `!snake`, que dibuja un tablero 5x5 y una cruz de botone
 | snake_apple | |
 | snake_score | |
 | snake_alive | No (opcional, se puede dejar vacío) |
+
+> [!NOTE]
+> Idea de [The Bear 2](https://discord.com/users/1345587723980902483)
