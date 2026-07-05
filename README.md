@@ -32,23 +32,5 @@ BDFD **no tiene loops reales** (`for`, `while`, etc.), así que este proyecto re
    - `snake_dir`
    - `snake_apple`
    - `snake_score`
-   - `snake_alive` (déjala con valor por defecto `no` en el panel)
+   - `snake_alive`
 5. Guarda, publica el bot y ejecuta `!snake` en tu servidor.
-
-## Estructura de este repo
-
-```
-Codigos/
-  !snake.md            → código del comando que inicia la partida
-  $onInteraction.md     → código que maneja todos los botones (movimiento, colisiones, respawn, seguridad)
-Assents/
-  mpg.png               → imagen del jugador/creador
-  snake.png             → logo del juego
-README.md               → este archivo
-```
-
-## Nota sobre las imágenes
-
-Las imágenes de `Assents/` son **placeholders genéricos** (no tenía las artes originales de "mpg" y "snake" para incluir). Reemplázalas por las tuyas manteniendo el mismo nombre de archivo (`mpg.png` y `snake.png`) y este README se actualizará solo, sin tocar nada más.
-
-> ⚠️ También noté que pediste la extensión `.pnj` para las imágenes — no es un formato de imagen válido (GitHub no puede renderizarlo en el README), así que las dejé como `.png`, que es lo que realmente se necesita para que se vean aquí arriba.
