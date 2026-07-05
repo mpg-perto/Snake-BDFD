@@ -40,9 +40,10 @@ Se juega con el comando `!snake`, que dibuja un tablero 5x5 y una cruz de botone
 
 ## Variables necesarias
 
-|| Variables || Valor ||
-|| snake_body || Dejalo vacio ||
-|| snake_dir || Dejalo vacio ||
-|| snake_apple || Dejalo vacio ||
-|| snake_score || Dejalo vacio ||
-|| snake_alive || No (opcional, se puede dejar vacio) ||
+| Variables | Valor |
+| :--- | :--- |
+| cuerpo_serpiente | |
+| serpiente_dir | |
+| manzana_serpiente | |
+| puntuación_serpiente | |
+| serpiente_viva | No (opcional, se puede dejar vacío) |
