@@ -6,6 +6,7 @@
 ```bdscript
 $nomention
 $textSplit[$customID;-]
+$if[$splitText[1]==snake]
 $var[action;$splitText[2]]
 $var[ownerID;$splitText[3]]
 
@@ -262,4 +263,4 @@ $endif
 $if[$var[unauthorized]==yes]
 $sendMessage[❌ No puedes usar esta partida. Ejecuta !snake para crear la tuya.]
 $endif
-```
+$endif```
