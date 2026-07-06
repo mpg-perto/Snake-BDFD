@@ -24,7 +24,7 @@ $if[$var[unauthorized]==no]
   $setUserVar[snake_score;0;$var[ownerID]]
   $setUserVar[snake_alive;yes;$var[ownerID]]
 
-  $c[----- Manzana aleatoria al reiniciar -----]
+ 
   $textSplit[3,3|3,2|3,1;|]
   $var[cand1;$random[1;5],$random[1;5]]
   $if[$getTextSplitIndex[$var[cand1]]==-1]
@@ -157,7 +157,7 @@ $if[$var[unauthorized]==no]
                 $endif
               $endif
             $else
-            $c[----- Respawn normal de manzana: 3 intentos al azar + barrido completo garantizado -----]
+            
             $var[cand1;$random[1;5],$random[1;5]]
               $if[$getTextSplitIndex[$var[cand1]]==-1]
               $setUserVar[snake_apple;$var[cand1];$var[ownerID]]
@@ -216,7 +216,7 @@ $if[$var[unauthorized]==no]
   $endif
 $endif
 
-$c[----- RENDER: se ejecuta SIEMPRE, sin importar la rama anterior -----]
+
 $var[bodyNow;$getUserVar[snake_body;$var[ownerID]]]
 $var[appleNow;$getUserVar[snake_apple;$var[ownerID]]]
 $var[scoreNow;$getUserVar[snake_score;$var[ownerID]]]
