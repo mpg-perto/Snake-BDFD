@@ -13,7 +13,7 @@ $setUserVar[snake_dir;right;$authorID]
 $setUserVar[snake_score;0;$authorID]
 $setUserVar[snake_alive;yes;$authorID]
 
-$c[----- Colocar manzana inicial de forma aleatoria -----]
+
 $textSplit[3,3|3,2|3,1;|]
 $var[cand1;$random[1;5],$random[1;5]]
 $if[$getTextSplitIndex[$var[cand1]]==-1]
