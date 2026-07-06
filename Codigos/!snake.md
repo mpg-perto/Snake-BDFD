@@ -13,7 +13,7 @@ $setUserVar[snake_dir;right;$authorID]
 $setUserVar[snake_score;0;$authorID]
 $setUserVar[snake_alive;yes;$authorID]
 
-
+$c[----- Colocar manzana inicial de forma aleatoria -----]
 $textSplit[3,3|3,2|3,1;|]
 $var[cand1;$random[1;5],$random[1;5]]
 $if[$getTextSplitIndex[$var[cand1]]==-1]
@@ -93,5 +93,4 @@ $addActionRow[rowDown;snakeC]
 $addButtonCV2[snake-deco-3-1;;secondary;true;⬛;rowDown]
 $addButtonCV2[snake-down-$authorID;;secondary;false;🔽;rowDown]
 $addButtonCV2[snake-deco-3-3;;secondary;true;⬛;rowDown]
-$endif
-```
+$endif```
